@@ -1,0 +1,31 @@
+
+app:
+  bucket-name: irembo-test-cert-bucket
+  queue-name: certificate
+  certificate-folder: certificates
+  aws-secret-key: AKIA57LRAA6PW7N33DVM
+  aws-secret-value: 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
+  jwt-secret-key: iremboJwtSecretKeyiremboJwtSecretKeyiremboJwtSecretKey
+  jwt-expiration-time: 3600000
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: Bakhti1997!@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+        jdbc:
+          batch_size: 100
+  properties:
+    hibernate:
+      jdbc:
+        time_zone: UTC
+  codec:
+    max-in-memory-size: 100MB
